@@ -285,10 +285,10 @@ def find_incorrect_rows_columns_subgrids(matrix):
 def predict_numbers(numbers, matice):
 
     if selected_model == "Custom":
-        model_path = '/content/drive/MyDrive/OpenCV/SudokuSolver/digit_recognition_model.xml'
+        model_path = 'digit_recognition_model.xml'
         svm = cv2.ml.SVM_load(model_path)
     elif selected_model == "MINIST":
-        model_path = '/content/drive/MyDrive/OpenCV/SudokuSolver/minist_digit_recognition_model.xml'  # Update with the path to your other model
+        model_path = 'minist_digit_recognition_model.xml'  # Update with the path to your other model
         svm = cv2.ml.SVM_load(model_path)
 
     winSize = (28,28)
@@ -299,7 +299,7 @@ def predict_numbers(numbers, matice):
     hog = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
 
     # Load the trained SVM model
-    # clf = joblib.load("/content/drive/MyDrive/OpenCV/SudokuSolver/digit_recognition_model.pkl")  # Replace with the path to your trained model file
+    # clf = joblib.load("digit_recognition_model.pkl")  # Replace with the path to your trained model file
 
 
     for row in range(9):
