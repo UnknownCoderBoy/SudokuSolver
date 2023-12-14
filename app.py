@@ -350,9 +350,9 @@ def display_table(grid, label):
           }
       </style>
   """, unsafe_allow_html=True)
-	html = styled_df_combined.hide_index().hide_columns().render()
+	# html = styled_df_combined.hide_index().hide_columns().render()
 	#html = '<div style="display: flex; justify-content: center;">'+html+'</div>'
-	html = html + '<div class="st-emotion-cache-ltfnpr" style="width: 300px; padding-bottom: 30px;">'+label+'</div>'
+	html = '<div class="st-emotion-cache-ltfnpr" style="width: 300px; padding-bottom: 30px;">'+label+'</div>'
 	st.write(html, unsafe_allow_html=True)
 
 st.set_page_config(page_title="Sudoku Solver")
