@@ -1,6 +1,5 @@
 opencv-python-headless
 numpy
 pandas
-time
 joblib
 scikit-image
